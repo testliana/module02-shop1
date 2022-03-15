@@ -1,0 +1,17 @@
+$bg: #eee;
+
+.box {
+    background-color: $bg;
+    &__title {
+        color: #ff0;
+    }
+    &__image {
+        max-width: 200px;  
+    }
+    &__svg {
+        fill: #ff0;
+        &:hover {
+            fill: #eee;
+        }
+    }
+}
