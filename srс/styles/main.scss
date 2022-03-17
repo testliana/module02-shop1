@@ -1,33 +1,46 @@
-$text: #27300f;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,700&family=Jost:wght@400;500&display=swap');
+
+$green: #27300f;
 $orange: #d26a22;
 $white: #fff;
+
+$font-jost:'Jost', sans-serif;
+$font-cormorant:'Cormorant', serif;
+
+html {
+    font-size: 10px;
+}
+body {
+    font-size: 1.6rem;
+    font-family: $font-jost;
+    color: $green;
+}
 
 .header {
     max-width: 1440px;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 4rem 15px 0 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
     &__nav {
         display: flex;
         list-style: none;
         margin: 0;
         padding-left: 0;
-        gap: 48px;
+        gap: 4.8rem;
     }
     &__link {
-        font-size: 16px;
-        color: $text;
+        color: $green;
         text-decoration: none;
         &:hover {
             color: $orange;
         }
     }
     &__tel {
-    font-size: 16px;
-    color: $text;
+    color: $green;
+    font-weight: 500;
     text-decoration: none;
     &:hover {
         color: $orange;
@@ -35,22 +48,26 @@ $white: #fff;
 }
     &__cart {
         display: block;
-        width: 40px;
-        height: 40px;
+        width: 3.8rem;
+        height: 3.8rem;
         border-radius: 100%;
         background-color: $orange;
         background-image: url(../images/cart-black.svg);
-        background-size: 17px 15px;
+        background-size: 1.7rem 1.5rem;
         background-repeat: no-repeat;
         background-position: center center;
         position: relative;
+        border: 1px solid $orange;
+        &:hover {
+            background-color: $green;
+            border: 1px solid $green;
     }
     &__counter {
         color: $white;
-        font-size: 8px;
+        font-size: 0.8rem;
         position: absolute;
-        right: 10px;
-        top: 6px;
+        right: 1rem;
+        top: 0.6rem;
     }
 }
 .logo {
@@ -58,6 +75,57 @@ $white: #fff;
     background-image: url(../images/logo.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 120px;
-    height: 32px;
+    width: 12.3rem;
+    height: 3.2rem;
+}
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.main{
+    background-image: url(../images/main.png);
+    background-size: cover;
+    background-position-x: center;
+    &__item {
+        margin-left: 12rem;
+        max-width: 378px;
+        margin-top: 6rem;
+    }
+    &__link {
+        margin-top: 6rem;
+    }
+}
+.title {
+    font-family: $font-cormorant;
+    font-weight: 700;
+    font-size: 8rem;
+    color: $green;
+    margin: 0;
+    &__span {
+        font-style: italic;
+    }
+    &__blok {
+        .title__span {
+            display: block;
+        }
+    }
+}
+.discription {
+    margin: 0;
+    &_sise-s {
+        font-size: 2rem;
+    }
+}
+.link {
+    color: $white;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    padding: 2.5rem 4.2rem;
+    background-color: $orange;
+    box-shadow: 0px 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
+    text-decoration: none;
+    border-radius: 3.8rem;
+    display: inline-block;
 }
