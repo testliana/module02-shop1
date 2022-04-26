@@ -1603,6 +1603,7 @@ footer {
         justify-content: space-between;
         font-size: 1.8rem;
         display: flex;
+        gap: 5rem;
         @media (max-width: $r_desk_1280) {
             flex-basis: auto;
             flex-grow: 1;
